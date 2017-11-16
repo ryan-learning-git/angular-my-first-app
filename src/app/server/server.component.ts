@@ -7,6 +7,11 @@ import {Component} from '@angular/core';
 export class ServerComponent {
   // this allows the class to be used outside of this file
 
+  serverId: number = 10;
+  serverStatus: string = 'Offline';
 
+  serverSpace: string = '20 Gb';
+
+  getServerSpace(){ return this.serverSpace; }
 
 }
