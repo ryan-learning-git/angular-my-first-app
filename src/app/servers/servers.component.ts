@@ -11,6 +11,8 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
 
+  serverName: string = '';
+
   constructor() {
     // using () => to allow use of 'this' keyword with an es6 arrow function
     setTimeout(() => {
@@ -23,6 +25,12 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: any){
+    // console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
+    // console.log(this.serverName);
   }
 
 }
