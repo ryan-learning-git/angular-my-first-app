@@ -23,3 +23,17 @@
 
 <app-server></app-server>
 <app-server></app-server>
+
+<h2>Assignment 02</h2>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="username"
+       />
+
+<p>Hello {{username}}, how are you?</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="isUsernameEmpty()"
+  (click)="onClickUsernameButton()"
+>Click Me</button>
