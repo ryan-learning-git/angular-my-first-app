@@ -6,6 +6,8 @@
 <input
   type="text"
   class="form-control"
+  name="serverName"
+  id="serverName"
   [(ngModel)]="serverName"
 />
 
@@ -15,7 +17,9 @@
   (click)="onCreateServer()"
   >Add Server</button>
 
-{{serverCreationStatus}}
+<!--<p>{{serverCreationStatus}}</p>-->
+
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}.</p>
 
 <p>{{allowNewServer}}</p>
 <p [innerText]="allowNewServer">This is some text</p>
@@ -23,17 +27,3 @@
 
 <app-server></app-server>
 <app-server></app-server>
-
-<h2>Assignment 02</h2>
-<input type="text"
-       class="form-control"
-       [(ngModel)]="username"
-       />
-
-<p>Hello {{username}}, how are you?</p>
-
-<button
-  class="btn btn-primary"
-  [disabled]="isUsernameEmpty()"
-  (click)="onClickUsernameButton()"
->Click Me</button>

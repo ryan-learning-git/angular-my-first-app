@@ -12,7 +12,8 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
 
   serverName: string = '';
-  username:string = '';
+
+  serverCreated:boolean = false;
 
   constructor() {
     // using () => to allow use of 'this' keyword with an es6 arrow function
@@ -26,13 +27,9 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreationStatus = 'Server was created, name is '+this.serverName+'!';
+    this.serverCreated = true;
   }
 
-  isUsernameEmpty(){ return this.username==''; }
-
-  onClickUsernameButton(){
-    this.username = '';
-  }
 
   // not used anymore
   onUpdateServerName(event: any){
