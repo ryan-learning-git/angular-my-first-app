@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  allowNewServer = false;
+
+  constructor() {
+    // using () => to allow use of 'this' keyword with an es6 arrow function
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit() {
   }
