@@ -15,11 +15,11 @@
   (click)="onCreateServer()"
   >Add Server</button>
 
+{{serverCreationStatus}}
 
 <p>{{allowNewServer}}</p>
 <p [innerText]="allowNewServer">This is some text</p>
 
-<p>{{serverCreationStatus}}</p>
 
 <app-server></app-server>
 <app-server></app-server>
