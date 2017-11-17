@@ -13,6 +13,14 @@ export class ServerComponent {
 
   serverSpace: string = '20 Gb';
 
+  constructor(){
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
+
   getServerSpace(){ return this.serverSpace; }
+
+  getColour(){
+    return this.serverStatus == 'online' ? '#009900' : '#990000';
+  }
 
 }

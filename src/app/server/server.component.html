@@ -1,1 +1,4 @@
-<p>{{'Server'+' with '}} ID {{ serverId }} is {{ serverStatus }} and has {{ getServerSpace() }} left.</p>
+<p
+  [ngStyle]="{'background-color': getColour()}"
+  [ngClass]="{'online': serverStatus === 'online', 'offline': serverStatus === 'offline'}"
+>{{'Server'+' with '}} ID {{ serverId }} is {{ serverStatus }} and has {{ getServerSpace() }} left.</p>
