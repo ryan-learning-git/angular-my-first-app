@@ -19,7 +19,7 @@ export class Assignment003Component implements OnInit {
   buttonPress(){
     this.toggleState = !this.toggleState;
     this.count++;
-    this.logItems.push(this.count);
+    this.logItems.push(new Date());
   }
 
   haveBlue(logItem: number){

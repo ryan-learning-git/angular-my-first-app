@@ -7,5 +7,5 @@
 <p [ngClass]="{'hidden': toggleState === false}">This is a paragraph of text</p>
 
 <ul>
-  <li *ngFor="let logItem of logItems" [ngClass]="{'blue': haveBlue(logItem)}">Item {{logItem}} has been added.</li>
+  <li *ngFor="let logItem of logItems; let i = index" [ngClass]="{'blue': haveBlue(i)}">Item {{logItem}} has been added {{i + 1}}.</li>
 </ul>
